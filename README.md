@@ -2,6 +2,7 @@
 
 This repository contains a collection of useful Linux commands, configurations, and tips. Whether you're a beginner or a seasoned Linux user, these notes are intended to help you navigate and manage Linux systems more efficiently.
 
+I have followed the [Engineering Digest's YT Playlist](https://youtube.com/playlist?list=PLA3GkZPtsafbK3YyxdRzF5yh1TuwGn_Lu&si=m4Hlp0XeYGoLGMR4)
 ## Table of Contents
 - [Getting Started](#getting-started)
 - [Basic Commands](#basic-commands)
@@ -32,6 +33,7 @@ Here’s how to get started:
 
 2. Explore the directory to find notes on various Linux topics.
 
+
 ---
 
 ## Basic Commands
@@ -45,6 +47,7 @@ These are essential commands to get you started with Linux:
 - `mv`: Move/rename files or directories.
 - `rm`: Remove files or directories.
 
+
 ---
 
 ## System Information
@@ -55,6 +58,7 @@ Useful commands for checking system information:
 - `top`: Displays active processes and system resource usage.
 - `df -h`: Shows disk usage in a human-readable format.
 - `free -m`: Displays free and used memory in megabytes.
+
 
 ---
 
@@ -67,6 +71,7 @@ Commands to manage files and directories:
 - `chown`: Change file owner and group.
 - `ln -s`: Create symbolic links.
 
+
 ---
 
 ## Process Management
@@ -76,6 +81,7 @@ Monitor and control processes on your Linux system:
 - `ps`: Report a snapshot of current processes.
 - `kill`: Send a signal to a process.
 - `htop`: An interactive process viewer.
+
 
 ---
 
@@ -97,6 +103,7 @@ Commands to manage users and groups:
 - `passwd`: Update a user's password.
 - `groupadd`: Add a new group.
 
+
 ---
 
 ## Disk Management
@@ -106,6 +113,7 @@ Handle partitions, disks, and file systems:
 - `fdisk`: Partition table manipulator for Linux.
 - `mkfs`: Build a Linux file system.
 - `mount`: Mount a file system.
+
 
 ---
 
@@ -117,6 +125,7 @@ Automate tasks using shell scripts:
 - Variables: `varname=value`
 - Conditional statements: `if`, `else`, `fi`
 
+
 ---
 
 ## Security & Permissions
@@ -127,6 +136,7 @@ Understand and manage permissions and security in Linux:
 - `chmod` and `chown` commands
 - Using `sudo` to execute commands as root.
 
+
 ---
 
 ## Troubleshooting
@@ -136,6 +146,7 @@ Some useful tips for diagnosing and fixing common Linux issues:
 - Viewing system logs: `journalctl`, `/var/log`
 - Diagnosing network issues: `ping`, `traceroute`
 - Managing services: `systemctl`, `service`
+
 
 ---
 
@@ -148,5 +159,6 @@ Contributions are welcome! If you'd like to contribute to this repository, pleas
 3. Commit your changes: `git commit -m 'Add some feature'`
 4. Push to the branch: `git push origin feature/your-feature`
 5. Open a pull request.
+
 
 ---
