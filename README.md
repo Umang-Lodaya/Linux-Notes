@@ -27,8 +27,8 @@ Here’s how to get started:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/linux-notes.git
-    cd linux-notes
+    git clone https://github.com/Umang-Lodaya/Linux-Notes.git
+    cd Linux-Notes
     ```
 
 2. Explore the directory to find notes on various Linux topics.
