@@ -1,164 +1,190 @@
-# Linux-Notes
+# Linux Command Notes
 
-This repository contains a collection of useful Linux commands, configurations, and tips. Whether you're a beginner or a seasoned Linux user, these notes are intended to help you navigate and manage Linux systems more efficiently.
+This repository contains helpful notes and examples for basic Linux commands. It covers file operations, navigation, and text editing to help users work effectively within the Linux terminal.
 
-I have followed the [Engineering Digest's YT Playlist](https://youtube.com/playlist?list=PLA3GkZPtsafbK3YyxdRzF5yh1TuwGn_Lu&si=m4Hlp0XeYGoLGMR4)
 ## Table of Contents
-- [Getting Started](#getting-started)
-- [Basic Commands](#basic-commands)
-- [System Information](#system-information)
-- [File Management](#file-management)
-- [Process Management](#process-management)
-- [Networking](#networking)
-- [User Management](#user-management)
-- [Disk Management](#disk-management)
-- [Shell Scripting](#shell-scripting)
-- [Security & Permissions](#security--permissions)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
+- Basic File and Directory Commands
+	- mkdir - Create Directories
+	- touch - Create/Update Files
+	- rm - Remove Files/Directories
+	- cp - Copy Files/Directories
+	- mv - Move or Rename Files/Directories
+- Viewing and Editing Files
+	- nano - Text Editor
+	- cat - View File Contents
+- File Metadata and Information
+	- ls - List Directory Contents
+	- pwd - Print Working Directory
+	- file - Determine File Type
+	- stat - Display File Information
+	- File Timestamps
+- Search and Navigation
+	- cd - Change Directory
+	- man - View Command Manuals
 
 ---
 
-## Getting Started
+## Basic File and Directory Commands
 
-Before diving into the notes, ensure you have access to a Linux distribution such as Ubuntu, Fedora, CentOS, or any other distro of your choice. You can also set up a virtual machine or use a cloud-based Linux environment.
+### `mkdir` - Create Directories
+- Create a directory:
+  ```bash
+  mkdir folder-name
+  ```
+- Create multiple directories:
+  ```bash
+  mkdir dir1 dir2 dir3
+  ```
+- Create a nested directory structure:
+  ```bash
+  mkdir -p parent/child
+  ```
 
-Here’s how to get started:
+### `touch` - Create/Update Files
+- Create a new file or update its modification and access time:
+  ```bash
+  touch file.txt
+  ```
+- Create or update multiple files:
+  ```bash
+  touch file1.txt file2.txt
+  ```
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/Umang-Lodaya/Linux-Notes.git
-    cd Linux-Notes
-    ```
+### `rm` - Remove Files/Directories
+- Remove a file:
+  ```bash
+  rm file.txt
+  ```
+- Remove an empty directory:
+  ```bash
+  rm -d folder-name
+  ```
+- Remove a directory and its contents:
+  ```bash
+  rm -r folder-name
+  ```
 
-2. Explore the directory to find notes on various Linux topics.
+### `cp` - Copy Files/Directories
+- Copy a file:
+  ```bash
+  cp file.txt /destination/
+  ```
+- Copy a directory recursively:
+  ```bash
+  cp -r src-folder/ dest-folder/
+  ```
 
-
----
-
-## Basic Commands
-
-These are essential commands to get you started with Linux:
-
-- `ls`: List directory contents.
-- `cd`: Change directory.
-- `pwd`: Print working directory.
-- `cp`: Copy files or directories.
-- `mv`: Move/rename files or directories.
-- `rm`: Remove files or directories.
-
-
----
-
-## System Information
-
-Useful commands for checking system information:
-
-- `uname -a`: Shows system information.
-- `top`: Displays active processes and system resource usage.
-- `df -h`: Shows disk usage in a human-readable format.
-- `free -m`: Displays free and used memory in megabytes.
-
-
----
-
-## File Management
-
-Commands to manage files and directories:
-
-- `mkdir`: Create a new directory.
-- `chmod`: Change file permissions.
-- `chown`: Change file owner and group.
-- `ln -s`: Create symbolic links.
-
-
----
-
-## Process Management
-
-Monitor and control processes on your Linux system:
-
-- `ps`: Report a snapshot of current processes.
-- `kill`: Send a signal to a process.
-- `htop`: An interactive process viewer.
-
+### `mv` - Move or Rename Files/Directories
+- Move a file:
+  ```bash
+  mv file.txt /destination/
+  ```
+- Rename a file:
+  ```bash
+  mv file1.txt file2.txt
+  ```
 
 ---
 
-## Networking
+## Viewing and Editing Files
 
-Key networking commands and tips:
+### `nano` - Text Editor
+- Open a file in `nano`:
+  ```bash
+  nano file.txt
+  ```
+- Save and exit: `Ctrl + O` (save), `Ctrl + X` (exit)
+- Copy/Cut/Paste:
+  - `Ctrl + K` (cut), `Ctrl + U` (paste)
+  - `Ctrl + Shift + C` (copy), `Ctrl + Shift + V` (paste)
 
-- `ifconfig`: Configure network interfaces.
-- `ping`: Check the network connection to a host.
-- `netstat`: Network statistics.
-
----
-
-## User Management
-
-Commands to manage users and groups:
-
-- `useradd`: Create a new user.
-- `passwd`: Update a user's password.
-- `groupadd`: Add a new group.
-
-
----
-
-## Disk Management
-
-Handle partitions, disks, and file systems:
-
-- `fdisk`: Partition table manipulator for Linux.
-- `mkfs`: Build a Linux file system.
-- `mount`: Mount a file system.
-
+### `cat` - View File Contents
+- Display contents of a file:
+  ```bash
+  cat file.txt
+  ```
+- Show contents with line numbers:
+  ```bash
+  cat -n file.txt
+  ```
 
 ---
 
-## Shell Scripting
+## File Metadata and Information
 
-Automate tasks using shell scripts:
+### `ls` - List Directory Contents
+- List files and directories:
+  ```bash
+  ls
+  ```
+- List with details (permissions, size, time):
+  ```bash
+  ls -l
+  ```
+- List all, including hidden files:
+  ```bash
+  ls -a
+  ```
 
-- Basic syntax: `#!/bin/bash`
-- Variables: `varname=value`
-- Conditional statements: `if`, `else`, `fi`
+### `pwd` - Print Working Directory
+- Display the current directory path:
+  ```bash
+  pwd
+  ```
 
+### `file` - Determine File Type
+- Display the file type of a file:
+  ```bash
+  file file.txt
+  ```
+
+### `stat` - Display File Information
+- Show detailed information about a file:
+  ```bash
+  stat file.txt
+  ```
+
+### File Timestamps
+- Show modification time:
+  ```bash
+  ls -l
+  ```
+- Show change time:
+  ```bash
+  ls -lc
+  ```
+- Show access time:
+  ```bash
+  ls -lu
+  ```
 
 ---
 
-## Security & Permissions
+## Search and Navigation
 
-Understand and manage permissions and security in Linux:
+### `cd` - Change Directory
+- Navigate to a directory:
+  ```bash
+  cd folder-name
+  ```
+- Navigate to the parent directory:
+  ```bash
+  cd ..
+  ```
+- Navigate to the home directory:
+  ```bash
+  cd ~
+  ```
 
-- File permissions: `r` (read), `w` (write), `x` (execute)
-- `chmod` and `chown` commands
-- Using `sudo` to execute commands as root.
-
+### `man` - View Command Manuals
+- View the manual page for any command:
+  ```bash
+  man command-name
+  ```
 
 ---
 
-## Troubleshooting
-
-Some useful tips for diagnosing and fixing common Linux issues:
-
-- Viewing system logs: `journalctl`, `/var/log`
-- Diagnosing network issues: `ping`, `traceroute`
-- Managing services: `systemctl`, `service`
-
-
----
-
-## Contributing
-
-Contributions are welcome! If you'd like to contribute to this repository, please fork the repo, make your changes, and submit a pull request.
-
-1. Fork the project.
-2. Create a feature branch: `git checkout -b feature/your-feature`
-3. Commit your changes: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin feature/your-feature`
-5. Open a pull request.
-
+### Contributing
+Feel free to submit pull requests or open issues if you find errors or want to add new commands.
 
 ---
